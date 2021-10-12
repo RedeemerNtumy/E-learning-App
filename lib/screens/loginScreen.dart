@@ -29,11 +29,17 @@ class Login extends StatelessWidget {
               ),
             ),
             WordsAboveInput(word: "Email"),
-            Inputs(),
+            Inputs(
+              status: false,
+              keyboardType: TextInputType.emailAddress,
+            ),
             WordsAboveInput(
               word: "Password",
             ),
-            Inputs(),
+            Inputs(
+              status: true,
+              keyboardType: TextInputType.text,
+            ),
           ],
         ),
       ),
