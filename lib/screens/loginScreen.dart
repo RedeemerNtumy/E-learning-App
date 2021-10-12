@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:reagan_first/constants.dart';
 import 'package:reagan_first/inputs.dart';
 import 'package:reagan_first/wordsAboveInput.dart';
@@ -32,6 +35,7 @@ class Login extends StatelessWidget {
             Inputs(
               status: false,
               keyboardType: TextInputType.emailAddress,
+              isVisible: false,
             ),
             WordsAboveInput(
               word: "Password",
@@ -39,7 +43,49 @@ class Login extends StatelessWidget {
             Inputs(
               status: true,
               keyboardType: TextInputType.text,
+              isVisible: true,
             ),
+            SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Column(
+                  children: [
+                    Text(
+                      "Forgot Password?",
+                      style: TextStyle(
+                        color: kblackAsh,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                    Text(
+                      "                                ",
+                      style: TextStyle(
+                        color: kblackAsh,
+                        decoration: TextDecoration.overline,
+                        decorationThickness: 2,
+                      ),
+                    )
+                  ],
+                ),
+                SizedBox(
+                  width: 25,
+                )
+              ],
+            ),
+            SizedBox(
+              height: 25,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: Color(0xff27B9F1),
+              ),
+              margin: EdgeInsets.only(left: 25, right: 25),
+              height: 65,
+            )
           ],
         ),
       ),
