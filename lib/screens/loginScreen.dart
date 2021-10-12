@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reagan_first/constants.dart';
+import 'package:reagan_first/inputs.dart';
+import 'package:reagan_first/wordsAboveInput.dart';
 
 class Login extends StatelessWidget {
   static const String id = "Login";
@@ -26,52 +28,12 @@ class Login extends StatelessWidget {
                 style: knormaltexts,
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(left: 25.0, top: 30, bottom: 10),
-              child: Text(
-                "Email",
-                style: knormaltexts,
-              ),
+            WordsAboveInput(word: "Email"),
+            Inputs(),
+            WordsAboveInput(
+              word: "Password",
             ),
-            Padding(
-              padding: EdgeInsets.only(left: 25, right: 25),
-              child: TextField(
-                decoration: InputDecoration(
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black26, width: 2.0),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(15),
-                    ),
-                  ),
-                ),
-                keyboardType: TextInputType.emailAddress,
-                textAlign: TextAlign.center,
-                onChanged: (value) {},
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 25.0, top: 30, bottom: 10),
-              child: Text(
-                "Password",
-                style: knormaltexts,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 25, right: 25),
-              child: TextField(
-                decoration: InputDecoration(
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black26, width: 2.0),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(15),
-                    ),
-                  ),
-                ),
-                keyboardType: TextInputType.emailAddress,
-                textAlign: TextAlign.center,
-                onChanged: (value) {},
-              ),
-            ),
+            Inputs(),
           ],
         ),
       ),
