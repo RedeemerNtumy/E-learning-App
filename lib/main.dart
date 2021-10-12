@@ -10,7 +10,7 @@ class Reagan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: First.id,
+      initialRoute: Login.id,
       routes: {
         Login.id: (context) => Login(),
         First.id:(context)=>First(),
