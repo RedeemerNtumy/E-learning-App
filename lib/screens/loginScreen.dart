@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reagan_first/constants.dart';
 
 class Login extends StatelessWidget {
   static const String id = "Login";
@@ -22,22 +23,55 @@ class Login extends StatelessWidget {
               padding: EdgeInsets.only(left: 25.0, top: 8.0),
               child: Text(
                 "Hey there, welcome back",
-                style: TextStyle(fontSize: 25, color: Colors.black87),
+                style: knormaltexts,
               ),
             ),
-            Text("Email"),
-            TextField(
-              decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(20),
+            Padding(
+              padding: EdgeInsets.only(left: 25.0, top: 30, bottom: 10),
+              child: Text(
+                "Email",
+                style: knormaltexts,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 25, right: 25),
+              child: TextField(
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black26, width: 2.0),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(15),
+                    ),
                   ),
                 ),
+                keyboardType: TextInputType.emailAddress,
+                textAlign: TextAlign.center,
+                onChanged: (value) {},
               ),
-              keyboardType: TextInputType.emailAddress,
-              textAlign: TextAlign.center,
-              onChanged: (value) {},
-            )
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 25.0, top: 30, bottom: 10),
+              child: Text(
+                "Password",
+                style: knormaltexts,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 25, right: 25),
+              child: TextField(
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black26, width: 2.0),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(15),
+                    ),
+                  ),
+                ),
+                keyboardType: TextInputType.emailAddress,
+                textAlign: TextAlign.center,
+                onChanged: (value) {},
+              ),
+            ),
           ],
         ),
       ),
