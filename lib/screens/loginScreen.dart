@@ -6,6 +6,7 @@ import 'package:reagan_first/constants.dart';
 import 'package:reagan_first/inputs.dart';
 import 'package:reagan_first/wordsAboveInput.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
+import 'package:reagan_first/screens/first.dart';
 
 class Login extends StatelessWidget {
   static const String id = "Login";
@@ -76,81 +77,96 @@ class Login extends StatelessWidget {
               ),
               Column(
                 children: [
-                  Container(
-                    child: Center(
-                        child: Text(
-                      "Login",
-                      style: TextStyle(fontSize: 25, color: Colors.white),
-                    )),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: Color(0xff27B9F1),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, First.id);
+                    },
+                    child: Container(
+                      child: Center(
+                          child: Text(
+                        "Login",
+                        style: TextStyle(fontSize: 25, color: Colors.white),
+                      )),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Color(0xff27B9F1),
+                      ),
+                      margin: EdgeInsets.only(left: 25, right: 25),
+                      height: 60,
                     ),
-                    margin: EdgeInsets.only(left: 25, right: 25),
-                    height: 65,
                   ),
                   SizedBox(
                     height: 25,
                   ),
                   Text(
                     "Or",
-                    style: TextStyle(fontSize: 25, color: kblackAsh),
+                    style: TextStyle(fontSize: 20, color: Colors.black),
                   ),
                   SizedBox(
                     height: 25,
                   ),
-                  Container(
-                    child: Center(
-                        child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Image(
-                            width: 30,
-                            height: 30,
-                            image: Svg('images/Facebook.svg'),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, First.id);
+                    },
+                    child: Container(
+                      child: Center(
+                          child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Image(
+                              width: 30,
+                              height: 30,
+                              image: Svg('images/Facebook.svg'),
+                            ),
                           ),
-                        ),
-                        Text(
-                          "Continue with Facebook",
-                          style: TextStyle(fontSize: 20, color: Colors.white),
-                        ),
-                      ],
-                    )),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: Color(0xff4267B2),
+                          Text(
+                            "Continue with Facebook",
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                        ],
+                      )),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Color(0xff4267B2),
+                      ),
+                      margin: EdgeInsets.only(left: 25, right: 25),
+                      height: 50,
                     ),
-                    margin: EdgeInsets.only(left: 25, right: 25),
-                    height: 50,
                   ),
                   SizedBox(
                     height: 15,
                   ),
-                  Container(
-                    child: Center(
-                        child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Image(
-                            width: 30,
-                            height: 30,
-                            image: Svg('images/google.svg'),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, First.id);
+                    },
+                    child: Container(
+                      child: Center(
+                          child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Image(
+                              width: 30,
+                              height: 30,
+                              image: Svg('images/google.svg'),
+                            ),
                           ),
-                        ),
-                        Text(
-                          "Continue with Google",
-                          style: TextStyle(fontSize: 20, color: Colors.black),
-                        ),
-                      ],
-                    )),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.white,
-                        border: Border.all(color: kblackAsh)),
-                    margin: EdgeInsets.only(left: 25, right: 25),
-                    height: 50,
+                          Text(
+                            "Continue with Google",
+                            style: TextStyle(fontSize: 20, color: Colors.black),
+                          ),
+                        ],
+                      )),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.white,
+                          border: Border.all(color: kblackAsh)),
+                      margin: EdgeInsets.only(left: 25, right: 25),
+                      height: 50,
+                    ),
                   ),
                   SizedBox(height: 25),
                   Center(
@@ -172,9 +188,14 @@ class Login extends StatelessWidget {
                               border: Border(
                                   bottom: BorderSide(
                                       color: Colors.black, width: 2.0))),
-                          child: Text(
-                            "Create Account",
-                            style: TextStyle(fontSize: 20),
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.pushNamed(context, First.id);
+                            },
+                            child: Text(
+                              "Create Account",
+                              style: TextStyle(fontSize: 20),
+                            ),
                           ),
                         ),
                       ],

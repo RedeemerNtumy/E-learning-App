@@ -13,8 +13,7 @@ class Reagan extends StatelessWidget {
       initialRoute: Login.id,
       routes: {
         Login.id: (context) => Login(),
-        First.id:(context)=>First(),
-
+        First.id: (context) => First(),
       },
     );
   }
