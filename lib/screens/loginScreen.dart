@@ -5,7 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:reagan_first/constants.dart';
 import 'package:reagan_first/inputs.dart';
 import 'package:reagan_first/wordsAboveInput.dart';
-import 'package:flutter_svg_provider/flutter_svg_provider.dart';
+import 'package:reagan_first/signWithButton.dart';
 import 'package:reagan_first/screens/first.dart';
 
 class Login extends StatelessWidget {
@@ -57,8 +57,10 @@ class Login extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.only(bottom: 0),
                     decoration: BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(color: kblackAsh, width: 1.5))),
+                      border: Border(
+                        bottom: BorderSide(color: kblackAsh, width: 1.5),
+                      ),
+                    ),
                     child: Text(
                       "Forgot Password?",
                       style: TextStyle(
@@ -105,68 +107,26 @@ class Login extends StatelessWidget {
                   SizedBox(
                     height: 25,
                   ),
-                  GestureDetector(
-                    onTap: () {
+                  SignWith(
+                    textColor: Colors.white,
+                    signCompany: "Facebook",
+                    buttonColor: Color(0xff4267B2),
+                    borderColor: kblackAsh,
+                    action: () {
                       Navigator.pushNamed(context, First.id);
                     },
-                    child: Container(
-                      child: Center(
-                          child: Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(12.0),
-                            child: Image(
-                              width: 30,
-                              height: 30,
-                              image: Svg('images/Facebook.svg'),
-                            ),
-                          ),
-                          Text(
-                            "Continue with Facebook",
-                            style: TextStyle(fontSize: 20, color: Colors.white),
-                          ),
-                        ],
-                      )),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Color(0xff4267B2),
-                      ),
-                      margin: EdgeInsets.only(left: 25, right: 25),
-                      height: 50,
-                    ),
                   ),
                   SizedBox(
                     height: 15,
                   ),
-                  GestureDetector(
-                    onTap: () {
+                  SignWith(
+                    textColor: Colors.black,
+                    signCompany: "Google",
+                    buttonColor: Colors.white,
+                    borderColor: kblackAsh,
+                    action: () {
                       Navigator.pushNamed(context, First.id);
                     },
-                    child: Container(
-                      child: Center(
-                          child: Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(12.0),
-                            child: Image(
-                              width: 30,
-                              height: 30,
-                              image: Svg('images/google.svg'),
-                            ),
-                          ),
-                          Text(
-                            "Continue with Google",
-                            style: TextStyle(fontSize: 20, color: Colors.black),
-                          ),
-                        ],
-                      )),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.white,
-                          border: Border.all(color: kblackAsh)),
-                      margin: EdgeInsets.only(left: 25, right: 25),
-                      height: 50,
-                    ),
                   ),
                   SizedBox(height: 25),
                   Center(
