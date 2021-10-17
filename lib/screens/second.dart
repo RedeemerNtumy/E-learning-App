@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:reagan_first/constants.dart';
-import 'second.dart';
+import 'first.dart';
 
-class First extends StatelessWidget {
-  static const String id = "First";
+class Second extends StatelessWidget {
+  static const String id = "Second";
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class First extends StatelessWidget {
       body: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('images/woman_learn.png'), fit: BoxFit.cover),
+                image: AssetImage('images/child.png'), fit: BoxFit.fill),
           ),
           constraints: BoxConstraints.expand(),
           child: SafeArea(
@@ -44,10 +44,10 @@ class First extends StatelessWidget {
                           ),
                           Container(
                             height: 5,
-                            width: 15,
+                            width: 30,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: Color(0xffe3f5ff),
+                              color: Color(0xff27B9F1),
                             ),
                           ),
                           SizedBox(
@@ -55,10 +55,10 @@ class First extends StatelessWidget {
                           ),
                           Container(
                             height: 5,
-                            width: 30,
+                            width: 15,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: Color(0xff27B9F1),
+                              color: Color(0xffe3f5ff),
                             ),
                           ),
                         ],
@@ -67,14 +67,14 @@ class First extends StatelessWidget {
                         height: 15,
                       ),
                       Text(
-                        "Take online quizzes and test",
+                        "Get Access to Quality Video Lessons",
                         style: TextStyle(color: Colors.black, fontSize: 30),
                       ),
                       SizedBox(
                         height: 30,
                       ),
                       Text(
-                        "My name is Redeemer Ntumy and I am learning flutter. I am using this design to practise.The owner of this design is Reagan Marfo",
+                        "At EduHome, we provide you with Quality Content in the best format to make learning a fun thing",
                         style: TextStyle(color: kblackAsh, fontSize: 20),
                       ),
                       SizedBox(height: 20),
@@ -87,7 +87,7 @@ class First extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) {
-                                    return Second();
+                                    return First();
                                   },
                                 ),
                               );
@@ -106,7 +106,7 @@ class First extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) {
-                                    return Second();
+                                    return First();
                                   },
                                 ),
                               );
