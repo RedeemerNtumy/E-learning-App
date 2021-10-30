@@ -17,6 +17,8 @@ class Login extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
+          //added padding here
+          // padding: const EdgeInsets.symmetric(horizontal: 5),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -77,91 +79,88 @@ class Login extends StatelessWidget {
               SizedBox(
                 height: 25,
               ),
-              Column(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pushNamed(context, First.id);
-                    },
-                    child: Container(
-                      child: Center(
-                          child: Text(
-                        "Login",
-                        style: TextStyle(fontSize: 25, color: Colors.white),
-                      )),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, First.id);
+                },
+                child: Container(
+                  child: Center(
+                      child: Text(
+                    "Login",
+                    style: TextStyle(fontSize: 25, color: Colors.white),
+                  )),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: Color(0xff27B9F1),
+                  ),
+                  margin: EdgeInsets.only(left: 25, right: 25),
+                  height: 60,
+                ),
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              Center(
+                child: Text(
+                  "Or",
+                  style: TextStyle(fontSize: 20, color: Colors.black),
+                ),
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              SignWith(
+                textColor: Colors.white,
+                signCompany: "Facebook",
+                buttonColor: Color(0xff4267B2),
+                borderColor: kblackAsh,
+                action: () {
+                  Navigator.pushNamed(context, First.id);
+                },
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              SignWith(
+                textColor: Colors.black,
+                signCompany: "Google",
+                buttonColor: Colors.white,
+                borderColor: kblackAsh,
+                action: () {
+                  Navigator.pushNamed(context, First.id);
+                },
+              ),
+              SizedBox(height: 25),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Don't have an account yet?",
+                      style: TextStyle(fontSize: 15, color: kblackAsh),
+                    ),
+                    SizedBox(
+                      width: 3,
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(bottom: 0),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Color(0xff27B9F1),
+                          border: Border(
+                              bottom:
+                                  BorderSide(color: Colors.black, width: 2.0))),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, First.id);
+                        },
+                        child: Text(
+                          "Create Account",
+                          style: TextStyle(fontSize: 15),
+                        ),
                       ),
-                      margin: EdgeInsets.only(left: 25, right: 25),
-                      height: 60,
                     ),
-                  ),
-                  SizedBox(
-                    height: 25,
-                  ),
-                  Text(
-                    "Or",
-                    style: TextStyle(fontSize: 20, color: Colors.black),
-                  ),
-                  SizedBox(
-                    height: 25,
-                  ),
-                  SignWith(
-                    textColor: Colors.white,
-                    signCompany: "Facebook",
-                    buttonColor: Color(0xff4267B2),
-                    borderColor: kblackAsh,
-                    action: () {
-                      Navigator.pushNamed(context, First.id);
-                    },
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  SignWith(
-                    textColor: Colors.black,
-                    signCompany: "Google",
-                    buttonColor: Colors.white,
-                    borderColor: kblackAsh,
-                    action: () {
-                      Navigator.pushNamed(context, First.id);
-                    },
-                  ),
-                  SizedBox(height: 25),
-                  Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          child: Text(
-                            "Don't have an account yet?",
-                            style: TextStyle(fontSize: 20, color: kblackAsh),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 3,
-                        ),
-                        Container(
-                          padding: EdgeInsets.only(bottom: 0),
-                          decoration: BoxDecoration(
-                              border: Border(
-                                  bottom: BorderSide(
-                                      color: Colors.black, width: 2.0))),
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.pushNamed(context, First.id);
-                            },
-                            child: Text(
-                              "Create Account",
-                              style: TextStyle(fontSize: 20),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
+                  ],
+                ),
               )
             ],
           ),
